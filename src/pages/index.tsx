@@ -19,11 +19,15 @@ export default function IndexPage() {
       <div className='p-2'></div>
       <div className='border rounded p-8 flex justify-between items-center max-w-2xl'>
         <div className='w-16 h-16 bg-red-800'>
-          <img src={firstPokemon.data?.sprites?.front_default} alt="" />
+          <picture>
+            <img src={firstPokemon.data?.sprites?.front_default} alt="" />
+          </picture>
         </div>
         <div className='p-8'>vs.</div>
         <div className='w-16 h-16 bg-red-800'>
-        <img src={secondPokemon.data?.sprites?.front_default} alt="" />
+          <picture>
+            <img src={secondPokemon.data?.sprites?.front_default} alt="" />
+          </picture>
         </div>
       </div>
     </div>
