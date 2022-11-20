@@ -12,7 +12,6 @@ export default function IndexPage() {
 
   if (firstPokemon.isLoading || secondPokemon.isLoading) return null;
 
-
   return (
     <div className='h-screen w-screen flex flex-col justify-center items-center text-white bg-gray-800'>
       <div className='text-2xl text-center'>Which pokemon is rounder?</div>
@@ -20,13 +19,13 @@ export default function IndexPage() {
       <div className='border rounded p-8 flex justify-between items-center max-w-2xl'>
         <div className='w-16 h-16 bg-red-800'>
           <picture>
-            <img src={firstPokemon.data?.sprites?.front_default} alt="" />
+            <img src={firstPokemon.data?.sprites?.front_default !== null ? firstPokemon.data?.sprites?.front_default : null} alt="" />
           </picture>
         </div>
         <div className='p-8'>vs.</div>
         <div className='w-16 h-16 bg-red-800'>
           <picture>
-            <img src={secondPokemon.data?.sprites?.front_default} alt="" />
+            <img src={secondPokemon.data?.sprites?.front_default !== null ? secondPokemon.data?.sprites?.front_default : null} alt="" />
           </picture>
         </div>
       </div>
