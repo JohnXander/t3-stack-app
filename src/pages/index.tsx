@@ -22,7 +22,6 @@ export default function IndexPage() {
   const secondPokeImg: string = String(secondPokemon.data?.sprites.front_default);
 
   const voteForRoundest = (selected: number) => {
-    console.log('hi')
     updateIds(getOptionsForVote())
   }
 
