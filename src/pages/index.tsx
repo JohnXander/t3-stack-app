@@ -12,12 +12,17 @@ export default function IndexPage() {
   const firstPokemon = trpc.getPokemon.useQuery({ id: first });
   const secondPokemon = trpc.getPokemon.useQuery({ id: second });
 
-  if (firstPokemon.isLoading || secondPokemon.isLoading) return null;
+  if (firstPokemon.isLoading || secondPokemon.isLoading) return (
+    <div className='text-2xl h-screen w-screen flex flex-col justify-center items-center text-white bg-gray-800'>
+      Loading...
+    </div>
+  )
 
   const firstPokeImg: string = String(firstPokemon.data?.sprites.front_default);
   const secondPokeImg: string = String(secondPokemon.data?.sprites.front_default);
 
   const voteForRoundest = (selected: number) => {
+    console.log('hi')
     updateIds(getOptionsForVote())
   }
 

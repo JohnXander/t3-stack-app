@@ -1,5 +1,6 @@
+import { inferProcedureInput } from '@trpc/server';
 import * as trpcNext from '@trpc/server/adapters/next';
-import { appRouter } from '../../../server/routers/_app';
+import { AppRouter, appRouter } from '../../../server/routers/_app';
 
 // export API handler
 export default trpcNext.createNextApiHandler({
