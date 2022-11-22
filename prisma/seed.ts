@@ -5,7 +5,8 @@ async function main() {
     await prisma.user.createMany({
         data: [
           {username: 'John 1'},
-          {username: 'John 2'}
+          {username: 'John 2'},
+          {username: 'John 3'}
       ]
   })
 }
