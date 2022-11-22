@@ -33,6 +33,8 @@ export default function IndexPage() {
     </div>
   )
 
+  // update env variables
+
   return (
     <div className='h-screen w-screen flex flex-col justify-center items-center text-white bg-gray-800'>
       <div className='text-2xl text-center'>Which pokemon is rounder?</div>
